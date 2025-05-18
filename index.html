@@ -22,7 +22,7 @@
       flex: 1;
     }
     .video-container {
-      flex: 2;
+      flex: 4; /* 以前は2でしたが、4に変更して動画エリアを大きく */
       padding: 10px;
     }
     .video-container iframe {
@@ -31,20 +31,22 @@
       border: none;
     }
     .list-container {
-      flex: 1;
+      flex: 1; /* 比率を維持していますが、video-containerが大きくなるので相対的に小さくなります */
       padding: 10px;
       overflow-y: auto;
+      min-width: 120px; /* 最小幅を設定して小さくなりすぎないようにする */
     }
     .list-container ul {
       list-style: none;
       padding: 0;
     }
     .list-container li {
-      margin-bottom: 10px;
+      margin-bottom: 8px; /* 少し狭く */
       cursor: pointer;
-      padding: 5px;
+      padding: 4px; /* 少し狭く */
       border-radius: 4px;
       transition: background-color 0.2s;
+      font-size: 0.9em; /* フォントサイズを少し小さく */
     }
     .list-container li:hover {
       background-color: #f0f0f0;
@@ -67,17 +69,17 @@
     </div>
     <div class="list-container">
       <ul>
-        <li data-start="1">A: 0:01 ～</li>
-        <li data-start="21">B: 0:21 ～</li>
-        <li data-start="42">C: 0:42 ～</li>
-        <li data-start="63">D: 1:03 ～</li>
-        <li data-start="89">E: 1:29 ～</li>
-        <li data-start="120">C'': 2:00 ～</li>
-        <li data-start="140">F: 2:20 ～</li>
-        <li data-start="163">G: 2:43 ～</li>
-        <li data-start="189">H: 3:09 ～</li>
-        <li data-start="207">I: 3:27 ～</li>
-        <li data-start="227">J: 3:47 ～</li>
+        <li data-start="1">A　0:01 ～</li>
+        <li data-start="21">B　0:21 ～</li>
+        <li data-start="42">C　0:42 ～</li>
+        <li data-start="63">D　1:03 ～</li>
+        <li data-start="89">E　1:29 ～</li>
+        <li data-start="120">C'' 2:00 ～</li>
+        <li data-start="140">F　2:20 ～</li>
+        <li data-start="163">G　2:43 ～</li>
+        <li data-start="189">H　3:09 ～</li>
+        <li data-start="207">I　3:27 ～</li>
+        <li data-start="227">J　3:47 ～</li>
       </ul>
     </div>
   </main>
